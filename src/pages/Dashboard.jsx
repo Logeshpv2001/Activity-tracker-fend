@@ -124,17 +124,40 @@ export default function Dashboard() {
               </div>
             </div>
 
+            {/* Center section – Track Progress Button */}
+            <div className="hidden md:flex">
+              <button
+                onClick={() => navigate("/dashboard")}
+                className="
+            flex items-center gap-2 px-6 py-2.5
+            bg-gradient-to-r from-purple-500/30 to-pink-500/30
+            hover:from-purple-500/50 hover:to-pink-500/50
+            border border-white/20
+            rounded-2xl
+            text-white font-semibold
+            backdrop-blur-md
+            shadow-lg
+            transition-all duration-300
+            hover:scale-105
+            active:scale-95
+          "
+              >
+                <Activity size={18} />
+                <span>Track Progress</span>
+              </button>
+            </div>
+
             {/* Right section */}
             <div className="flex items-center gap-3">
               <button
                 onClick={handleLogout}
                 className="
-      flex items-center gap-2 px-4 py-2
-      bg-white/10 hover:bg-white/20
-      border border-white/20
-      rounded-xl text-red-300
-      transition-all
-    "
+            flex items-center gap-2 px-4 py-2
+            bg-white/10 hover:bg-white/20
+            border border-white/20
+            rounded-xl text-red-300
+            transition-all
+          "
               >
                 <LogOut size={18} />
                 <span className="hidden sm:inline">Logout</span>
